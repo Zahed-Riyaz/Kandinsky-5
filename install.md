@@ -18,18 +18,7 @@ In encode.sh, update IMAGES_CAPTIONS_DIR="/lambda/nfs/us-east-1/zahed/kandinsky-
 
 ```sh
 bash encode/encode.sh
-```
 
-Update devices value to devices: 1 in configs/trainer/lora_image.yaml  
-Add num_workers:0 in data: for configs/data/lora_video_dataloader.yaml  
-
-Files to replace :  
-Replace configs/trainer/lora_video.yaml with in drive folder lora_video.yaml  
-Replace encode/encode_images.py with encode_images.py in drive folder  
-Replace train/lora_train.py with lora_train.py in drive folder  
-Replace train.sh with drive folder train.sh  
-
-```sh
 bash train.sh
 ```
 
@@ -72,7 +61,6 @@ pip install -U diffusers transformers accelerate torchcodec lightning tensorboar
 python download_models.py
 ```
 
-Download inference.py from drive folder  
 
 Commands for various configs :
 
