@@ -1,0 +1,19 @@
+common:
+  experiment_name: image_woman
+  experiment_dir: /home/jovyan/nkiselev/aij-2025/results
+  log_dir: /home/jovyan/nkiselev/aij-2025/results/tb_logs
+  checkpoint_dir: /home/jovyan/nkiselev/aij-2025/results/saved_models
+  visual_size: 1024
+  fps: 1
+  scale_factor:
+    - 1.0
+    - 1.0
+    - 1.0
+
+configs:
+  - trainer/lora_image.yaml
+  - data/lora_image_dataloader_woman.yaml
+  - metrics/image.yaml
+  - model/flux.yaml
+  - model/clip_qwen7b.yaml
+  - model/dit_6b_image.yaml

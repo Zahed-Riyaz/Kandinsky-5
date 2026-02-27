@@ -1,0 +1,18 @@
+common:
+  experiment_name: image
+  experiment_dir: results/test
+  log_dir: results/test/tb_logs
+  checkpoint_dir: results/test/saved_models
+  visual_size: 1024
+  fps: 1
+  scale_factor:
+    - 1.0
+    - 1.0
+    - 1.0
+
+configs:
+  - trainer/lora_image.yaml
+  - data/lora_image_dataloader.yaml
+  - model/flux.yaml
+  - model/clip_qwen7b.yaml
+  - model/dit_6b_image.yaml

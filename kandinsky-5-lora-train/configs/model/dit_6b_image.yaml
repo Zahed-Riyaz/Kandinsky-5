@@ -1,0 +1,28 @@
+dit:
+  checkpoint_path: kandinsky5/weights/model/kandinsky5lite_t2i.safetensors
+  dit_params:
+    in_visual_dim: 16
+    out_visual_dim: 16
+    in_text_dim: 3584
+    in_text_dim2: 768
+    time_dim: 512
+    patch_size:
+      - 1
+      - 2
+      - 2
+    model_dim: 2560
+    ff_dim: 10240
+    num_text_blocks: 2
+    num_visual_blocks: 50
+    axes_dims:
+      - 32
+      - 48
+      - 48
+    visual_cond: false
+  attention:
+    type: flash
+    chunk: false
+    causal: false
+    local: false
+    glob: false
+    window: 3

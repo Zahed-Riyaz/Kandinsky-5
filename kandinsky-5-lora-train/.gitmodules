@@ -1,0 +1,3 @@
+[submodule "kandinsky5"]
+	path = kandinsky5
+	url = https://github.com/kandinskylab/kandinsky-5.git

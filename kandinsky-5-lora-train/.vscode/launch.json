@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Debug Kandinsky LoRA",
+            "type": "python",
+            "request": "launch",
+            "python": "/home/collab/miniconda3/envs/kandindky5/bin/python",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--config", "configs/lora_video.yaml"
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+                "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True,max_split_size_mb:128",
+                "MASTER_ADDR": "127.0.0.1",
+                "MASTER_PORT": "55155",
+                "RANK": "0",
+                "LOCAL_RANK": "0",
+                "WORLD_SIZE": "1",
+                "PYTHONPATH": "${workspaceFolder}:${workspaceFolder}/kandinsky5"
+}
+        }
+    ]
+}

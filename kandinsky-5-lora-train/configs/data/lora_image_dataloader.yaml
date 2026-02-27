@@ -1,0 +1,7 @@
+data:
+  max_seq_len: 1
+  uncond_prob: 0.5
+  uncond_embed: cache/text_embeds/null.pt
+
+  latents_dir: cache/latents_image
+  text_embeds_dir: cache/text_embeds

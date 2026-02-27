@@ -1,0 +1,18 @@
+common:
+  experiment_name: video
+  experiment_dir: results/test
+  log_dir: results/test/tb_logs
+  checkpoint_dir: results/test/saved_models
+  visual_size: 512
+  fps: 24
+  scale_factor:
+    - 1.0
+    - 2.0
+    - 2.0
+
+configs:
+  - trainer/lora_video.yaml
+  - data/lora_video_dataloader.yaml
+  - model/hunyuan.yaml
+  - model/clip_qwen7b.yaml
+  - model/dit_2b_video.yaml

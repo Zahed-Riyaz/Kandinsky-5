@@ -1,0 +1,53 @@
+trainer:
+  micro_batch_size: 1
+  gradient_accumulation_steps: 4 # Higher means more stable, lower means faster
+  gradient_checkpointing: true
+  params:
+    visual_cond_prob: 0
+    scale_factor: ${common.scale_factor}
+    scheduler_scale: 5.0
+    devices: 1
+    num_nodes: 1
+  device_meshs:
+    dit:
+      fsdp_mesh: -1
+      tp_mesh: 1
+    text_embedder:
+      fsdp_mesh: -1
+  lora:
+    r: 32
+    lora_alpha: 32
+    target_modules:
+      - self_attention.to_query
+      - self_attention.to_key
+      - self_attention.to_value
+      - self_attention.out_layer
+      - cross_attention.to_query
+      - cross_attention.to_key
+      - cross_attention.to_value
+      - cross_attention.out_layer
+      - feed_forward.in_layer
+      - feed_forward.out_layer
+  
+checkpoint:
+  root_dir: ${common.checkpoint_dir}/${common.experiment_name}
+  last_save_interval: 250
+  regular_save_interval: 1000
+logger:
+  log_interval: 10
+  tensorboard:
+    root_dir: ${common.log_dir}
+    default_hp_metric: false
+    name: ${common.experiment_name}
+optimizer:
+  max_norm: 1.0
+  params:
+    lr: 1.0e-04
+    weight_decay: 1.0e-03
+    betas:
+    - 0.9
+    - 0.95
+    eps: 1.0e-08
+scheduler:
+  params:
+    num_warmup_steps: 1000

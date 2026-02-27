@@ -1,0 +1,6 @@
+data:
+  max_seq_len: 1
+  uncond_prob: 0.05
+  uncond_embed: /home/jovyan/nkiselev/aij-2025/data_woman/null_embed.pt
+  latents_dir: /home/jovyan/nkiselev/aij-2025/data_woman/latents_image
+  text_embeds_dir: /home/jovyan/nkiselev/aij-2025/data_woman/text_embeds

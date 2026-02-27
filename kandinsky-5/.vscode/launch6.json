@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug: k5_pro_i2v_5s_sft_hd.yaml",
+            "type": "python",
+            "request": "launch",
+            "program": "./inference.py",
+            "python": "/home/collab/miniconda3/envs/kandinsky5/bin/python",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True"
+            },
+            "args": [
+                "--config",
+                "configs/k5_pro_i2v_5s_sft_hd.yaml",
+                "--limit",
+                "5",
+                "--offload",
+                "--qwen_quantization",
+                "--width",
+                "1024",
+                "--height",
+                "1024",
+                "--video_duration",
+                "5",
+                "--sample_steps",
+                "50",
+                "--image",
+                "./assets/test_image.jpg"
+            ]
+        }
+    ]
+}

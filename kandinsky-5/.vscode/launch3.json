@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "k5_lite_t2i_sft_hd.yaml",
+            "type": "python",
+            "request": "launch",
+            "program": "./inference.py",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True"
+            },
+            "args": [
+                "--config",
+                "configs/k5_lite_t2i_sft_hd.yaml",
+                "--limit",
+                "5",
+                "--offload",
+                "--qwen_quantization",
+                "--width",
+                "1024",
+                "--height",
+                "1024",
+                "--sample_steps",
+                "50",
+                "--magcache"
+            ],
+            "python": "/home/collab/miniconda3/envs/kandinsky5/bin/python"
+        }
+    ]
+}
