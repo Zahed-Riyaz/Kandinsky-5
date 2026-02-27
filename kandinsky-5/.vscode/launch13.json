@@ -28,7 +28,7 @@
                 "--image",
                 "./assets/test_image.jpg"
             ],
-            "python": "/home/collab/miniconda3/envs/kandinsky5/bin/python"
+            "python": "${command:python.interpreterPath}"
         }
     ]
 }

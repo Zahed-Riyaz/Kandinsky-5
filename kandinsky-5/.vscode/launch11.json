@@ -27,7 +27,7 @@
                 "5",
                 "--magcache"
             ],
-            "python": "/home/collab/miniconda3/envs/kandinsky5/bin/python"
+            "python": "${command:python.interpreterPath}"
         }
     ]
 }

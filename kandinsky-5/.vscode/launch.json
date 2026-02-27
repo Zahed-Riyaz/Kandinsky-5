@@ -6,7 +6,7 @@
             "type": "python",
             "request": "launch",
             "program": "./inference.py",
-            "python": "/home/collab/miniconda3/envs/kandinsky5/bin/python",
+            "python": "${command:python.interpreterPath}",
             "console": "integratedTerminal",
             "env": {
                 "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True"

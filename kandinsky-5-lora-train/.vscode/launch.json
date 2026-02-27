@@ -5,7 +5,7 @@
             "name": "Python: Debug Kandinsky LoRA",
             "type": "python",
             "request": "launch",
-            "python": "/home/collab/miniconda3/envs/kandindky5/bin/python",
+            "python": "${command:python.interpreterPath}",
             "program": "${workspaceFolder}/main.py",
             "console": "integratedTerminal",
             "justMyCode": false,

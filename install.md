@@ -13,9 +13,6 @@ Download download_captions.py from drive folder
 python download_captions.py --output_dir "./captions_dir" --limit 50
 ```
 
-Update ‘checkpoint_path’ in configs/model/hunyuan.yaml to “./kandinsky5/weights/vae”  
-In encode.sh, update IMAGES_CAPTIONS_DIR="/lambda/nfs/us-east-1/zahed/kandinsky-5-lora-train/captions_dir"
-
 ```sh
 bash encode/encode.sh
 

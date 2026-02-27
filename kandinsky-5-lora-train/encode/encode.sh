@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # path to folder with pairs image-caption
-IMAGES_CAPTIONS_DIR="/lambda/nfs/us-east-1/zahed/kandinsky-5-lora-train/captions_dir"
+IMAGES_CAPTIONS_DIR="./captions_dir"
 
 # for training t2i
 SAVE_LATENTS_DIR_IMAGE="cache/latents_image"

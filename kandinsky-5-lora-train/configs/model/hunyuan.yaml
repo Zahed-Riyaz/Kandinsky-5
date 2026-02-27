@@ -1,4 +1,4 @@
 vae:
-  checkpoint_path: /lambda/nfs/us-east-1/zahed/kandinsky-5-lora-train/kandinsky5/weights/vae
+  checkpoint_path: ./kandinsky5/weights/vae
   name: hunyuan
 max_num_frames: 241 # for encoding
